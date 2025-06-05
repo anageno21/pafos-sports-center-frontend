@@ -11,9 +11,9 @@ export default function Header() {
             <Image
               src="/assets/logos/mwpMED.png"
               alt="Pafos Sports Center Logo"
-              width={120}
-              height={40}
-              className="object-contain w-24 sm:w-32 md:w-40"
+              width={60}
+              height={20}
+              className="object-contain w-12 sm:w-16 md:w-20"
             />
           </Link>
         </div>
