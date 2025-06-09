@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SportHero from './SportHero';
@@ -51,12 +52,21 @@ const SportCarousel = () => {
     },
   ];
 
+  const [initialSlide, setInitialSlide] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const index = sports.findIndex((sport) => sport.path === window.location.pathname);
+      setInitialSlide(index >= 0 ? index : 0);
+    }
+  }, []);
+
   return (
     <div className="sm:hidden w-full h-full">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        initialSlide={sports.findIndex((sport) => sport.path === window.location.pathname) || 0}
+        initialSlide={initialSlide}
         className="w-full h-full"
       >
         {sports.map((sport, index) => (

@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import SportCarousel from '@/components/SportCarousel';
 
-export default function Basketball() {
+export default function Tennis() {
   const bgColor = '#851535';
 
   return (
@@ -12,14 +12,14 @@ export default function Basketball() {
       <div className="hidden sm:block">
         <Hero
           backgroundColor={bgColor}
-          title="Discover Basketball at Pafos Sports Center"
-          description="Experience top-notch basketball courts and a vibrant community in the heart of Pafos."
+          title="Discover Tennis at Pafos Sports Center"
+          description="Enjoy world-class tennis courts and a dynamic community in the heart of Pafos."
           primaryButtonText="Book a Court"
           primaryButtonLink="/booking"
           secondaryButtonText="Learn More"
-          secondaryButtonLink="/basketball/about"
-          imageSrc="/assets/logos/mwpMED-basketball3.png"
-          imageAlt="Pafos Sports Center Basketball Image"
+          secondaryButtonLink="/tennis/about"
+          imageSrc="/assets/logos/mwpMED-tennis.png"
+          imageAlt="Pafos Sports Center Tennis Image"
           imageWidth={225}
           imageHeight={75}
         />
