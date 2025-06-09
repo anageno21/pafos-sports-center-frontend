@@ -17,7 +17,7 @@ export default function Pickleball() {
         primaryButtonLink="/booking"
         secondaryButtonText="Learn More"
         secondaryButtonLink="/pickleball/about"
-        imageSrc="/assets/logos/mwpMED-pickleball.png" // Ensure this image exists in public/assets/logos/
+        imageSrc="/assets/logos/mwpMED-pickleball3.png" // Ensure this image exists in public/assets/logos/
         imageAlt="Pafos Sports Center Pickleball Image"
         imageWidth={225}
         imageHeight={75}

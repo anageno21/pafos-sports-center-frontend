@@ -17,7 +17,7 @@ export default function Basketball() {
         primaryButtonLink="/booking"
         secondaryButtonText="Learn More"
         secondaryButtonLink="/basketball/about"
-        imageSrc="/assets/logos/mwpMED-basketball.png" // Ensure this image exists in public/assets/logos/
+        imageSrc="/assets/logos/mwpMED-basketball3.png" // Ensure this image exists in public/assets/logos/
         imageAlt="Pafos Sports Center Basketball Image"
         imageWidth={225}
         imageHeight={75}

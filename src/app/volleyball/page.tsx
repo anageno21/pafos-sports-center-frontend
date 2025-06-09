@@ -17,7 +17,7 @@ export default function Volleyball() {
         primaryButtonLink="/booking"
         secondaryButtonText="Learn More"
         secondaryButtonLink="/volleyball/about"
-        imageSrc="/assets/logos/mwpMED-volleyball.png" // Ensure this image exists in public/assets/logos/
+        imageSrc="/assets/logos/mwpMED-volleyball3.png" // Ensure this image exists in public/assets/logos/
         imageAlt="Pafos Sports Center Volleyball Image"
         imageWidth={225}
         imageHeight={75}

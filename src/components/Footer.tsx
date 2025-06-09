@@ -17,7 +17,7 @@ export default function Footer({ backgroundColor }: FooterProps) {
               alt="Pafos Sports Center Logo"
               width={60}
               height={20}
-              className="object-contain w-[50%] h-[50%]"
+              className="object-contain"
             />
           </Link>
         </div>

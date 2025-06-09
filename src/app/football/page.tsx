@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 
 export default function Football() {
   // Use the same background color as Home and Padel for consistency
-  const bgColor = '#748a5f';
+  const bgColor = '#851535';
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -17,7 +17,7 @@ export default function Football() {
         primaryButtonLink="/booking"
         secondaryButtonText="Learn More"
         secondaryButtonLink="/football/about"
-        imageSrc="/assets/logos/mwpMED-football.png" // Ensure this image exists in public/assets/logos/
+        imageSrc="/assets/logos/mwpMED-football3.png" // Ensure this image exists in public/assets/logos/
         imageAlt="Pafos Sports Center Football Image"
         imageWidth={225}
         imageHeight={75}
