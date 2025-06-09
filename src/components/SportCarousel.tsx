@@ -83,7 +83,6 @@ const SportCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <p className="text-xs text-gray-400 text-center mt-2">Swipe to the next sport</p>
     </div>
   );
 };

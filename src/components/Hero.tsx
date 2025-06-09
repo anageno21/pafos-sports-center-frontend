@@ -33,7 +33,7 @@ export default function Hero({
     <section className="py-12 px-4 sm:py-16 md:py-20 lg:py-24 bg-gray-800" style={{ backgroundColor }}>
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center">
         {/* First Frame (55%) - Image */}
-        <div className="w-full sm:w-[55%] flex justify-center sm:justify-start mb-2 sm:mb-0">
+        <div className="w-full sm:w-[55%] flex justify-center sm:justify-start mb-0 sm:mb-0">
           {imageSrc && (
             <Image
               src={imageSrc}
@@ -45,7 +45,7 @@ export default function Hero({
           )}
         </div>
         {/* Second Frame (45%) - Text & Buttons */}
-        <div className="w-full sm:w-[45%] text-center sm:text-left p-4 sm:p-8">
+        <div className="w-full sm:w-[45%] text-center sm:text-left p-2 sm:p-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
             {title}
           </h1>
