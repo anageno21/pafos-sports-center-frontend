@@ -72,6 +72,7 @@ export default function Hero({
               </Link>
             )}
           </div>
+          <p className="text-xs text-white text-center mt-2 sm:hidden">Swipe to the next sport</p>
         </div>
       </div>
     </section>
