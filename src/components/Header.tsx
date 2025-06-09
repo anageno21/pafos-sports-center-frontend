@@ -3,8 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
 interface HeaderProps {
   backgroundColor: string;
@@ -16,19 +14,6 @@ export default function Header({ backgroundColor = '#1a202c' }: HeaderProps) {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const navLinks = [
-    { href: '/about', label: 'About' },
-    { href: '/padel', label: 'Padel' },
-    { href: '/football', label: 'Football' },
-    { href: '/volleyball', label: 'Volleyball' },
-    { href: '/basketball', label: 'Basketball' },
-    { href: '/tennis', label: 'Tennis' },
-    { href: '/pickleball', label: 'Pickleball' },
-    { href: '/cafe', label: 'Cafe' },
-    { href: '/proshop', label: 'Proshop' },
-    { href: '/contact', label: 'Contact' },
-  ];
 
   return (
     <header className="py-4 px-4 sticky top-0 z-50 bg-gray-800" style={{ backgroundColor }}>
@@ -62,41 +47,92 @@ export default function Header({ backgroundColor = '#1a202c' }: HeaderProps) {
           </svg>
         </button>
         {/* Navigation */}
-        <nav className="hidden sm:flex flex-row sm:space-x-4 mt-0 text-sm sm:text-base">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
-              aria-current={undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav
+          className={`${
+            isMenuOpen ? 'flex' : 'hidden'
+          } sm:flex flex-col sm:flex-row sm:space-x-4 w-full sm:w-auto mt-4 sm:mt-0 text-sm sm:text-base`}
+        >
+          <Link
+            href="/about"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            href="/padel"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Padel
+          </Link>
+          <Link
+            href="/football"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Football
+          </Link>
+          <Link
+            href="/volleyball"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Volleyball
+          </Link>
+          <Link
+            href="/basketball"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Basketball
+          </Link>
+          <Link
+            href="/tennis"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Tennis
+          </Link>
+          <Link
+            href="/pickleball"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Pickleball
+          </Link>
+          <Link
+            href="/cafe"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Cafe
+          </Link>
+          <Link
+            href="/proshop"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Proshop
+          </Link>
+          <Link
+            href="/contact"
+            className="text-white hover:text-gray-200 font-medium py-1 sm:py-0"
+            aria-current={undefined}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
-        {/* Mobile Navigation with Swiper */}
-        {isMenuOpen && (
-          <div className="sm:hidden w-full mt-4">
-            <Swiper
-              spaceBetween={10}
-              slidesPerView={3}
-              centeredSlides={true}
-              className="w-full"
-            >
-              {navLinks.map((link) => (
-                <SwiperSlide key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white hover:text-gray-200 font-medium text-center block py-2 px-4"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        )}
         {/* CTA Buttons */}
         <div className="hidden sm:flex flex-col sm:flex-row sm:space-x-2 mt-4 sm:mt-0 text-sm sm:text-base">
           <Link
