@@ -13,6 +13,7 @@ interface HeroProps {
   primaryButtonLink?: string;
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
+  showSwipeHint?: boolean; // New prop to control swipe hint
 }
 
 export default function Hero({
@@ -27,6 +28,7 @@ export default function Hero({
   primaryButtonLink = '/',
   secondaryButtonText = '',
   secondaryButtonLink = '/',
+  showSwipeHint = false, // Default to false
 }: HeroProps) {
   console.log('Hero imageSrc:', imageSrc); // Debugging: Log the imageSrc to verify
   return (
@@ -72,7 +74,9 @@ export default function Hero({
               </Link>
             )}
           </div>
-          <p className="text-xs text-white text-center mt-2 sm:hidden">Swipe to the next sport</p>
+          {showSwipeHint && (
+            <p className="text-xs text-white text-center mt-2 sm:hidden">Swipe to the next sport</p>
+          )}
         </div>
       </div>
     </section>

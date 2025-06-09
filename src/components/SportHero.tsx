@@ -22,6 +22,7 @@ export default function SportHero({ bgColor, title, description, imageSrc, image
       imageAlt={imageAlt}
       imageWidth={225}
       imageHeight={75}
+      showSwipeHint={true} // Enable swipe hint for sports pages
     />
   );
 }
